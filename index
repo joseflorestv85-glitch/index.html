@@ -1,0 +1,390 @@
+#ffffff;
+        }
+
+        .about-card i {
+            font-size: 28px;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        /* SERVICIOS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-box {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 3px solid transparent;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            border-top: 3px solid #e67e22;
+        }
+
+        .service-box.image-service-box {
+            padding: 0;
+            overflow: hidden;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-photo {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #e67e22;
+        }
+
+        /* REGLAS ESPECÍFICAS PARA ENFOCAR/CENTRAR MEJOR LAS IMÁGENES */
+        img[src*="gestacion-bully"] {
+            object-position: center 30%;
+        }
+
+        img[src*="planes-nutricionales-bully"] {
+            object-position: center 20%;
+        }
+
+        .service-box.image-service-box .service-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .service-box i {
+            font-size: 40px;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+
+        .service-box h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        /* EQUIPO MÉDICO */
+        .team-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #e67e22;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .doctor-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #e67e22;
+        }
+
+        /* TESTIMONIOS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card span {
+            font-style: normal;
+            font-weight: 700;
+            color: #e67e22;
+            display: block;
+        }
+
+        /* PIE DE PÁGINA (FOOTER) */
+        footer {
+            background: #0d0d0d;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* BOTÓN FLOTANTE WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* REGLAS RESPONSIVE */
+        @media(max-width: 992px) {
+            header {
+                padding: 15px 30px;
+            }
+            .hero h1 {
+                font-size: 38px;
+            }
+            section {
+                padding: 60px 20px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            nav a {
+                margin-left: 0;
+                font-size: 14px;
+            }
+            .hero {
+                min-height: 70vh;
+                padding: 30px 15px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 35px;
+            }
+            .about-grid, .services-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-photo {
+                height: 200px;
+            }
+            .service-photo {
+                height: 180px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .btn {
+                padding: 12px 24px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+            .doctor-img {
+                width: 110px;
+                height: 110px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA CON LOGOTIPO -->
+    <header>
+        <a href="#" class="logo-container">
+            <img src="img/logo.jpg" alt="Logotipo JACCBULL Clínica Veterinaria" class="logo-img">
+            <div class="logo-text">JACC<span>BULL</span></div>
+        </a>
+        <nav>
+            <a href="#about">Especialidades</a>
+            <a href="#services">Servicios</a>
+            <a href="#team">Especialistas</a>
+            <a href="#testimonials">Testimonios</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <section class="hero">
+        <h1>Excelencia en <span>Reproducción y Nutrición</span> BullS</h1>
+        <p>Potenciamos la genética, cuidamos cada cruce y optimizamos el desarrollo nutricional de tus ejemplares de alto nivel.</p>
+        <a href="https://wa.me/tu_numero_de_whatsapp" class="btn" target="_blank">Consulta con un Especialista</a>
+    </section>
+
+    <!-- SOBRE NOSOTROS / PILARES -->
+    <section id="about">
+        <h2 class="section-title">Nuestra <span>Especialidad</span></h2>
+        <div class="about-grid">
+            
+            <!-- 1. Reproducción Avanzada -->
+            <div class="about-card image-card">
+                <img src="img/reproduccion-bully.jpg" alt="Reproducción Avanzada American Bully" class="section-photo">
+                <div class="card-content">
+                    <i class="fa-solid fa-dna"></i>
+                    <h3>Reproducción Avanzada</h3>
+                    <p>Monitoreo de progesterona, inseminación artificial especializada, ecografías de gestación y control obstétrico para asegurar camadas sanas.</p>
+                </div>
+            </div>
+            
+            <!-- 2. Nutrición y Desarrollo -->
+            <div class="about-card image-card">
+                <img src="img/nutricion-bully.jpg" alt="Nutrición y Desarrollo American Bully" class="section-photo">
+                <div class="card-content">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <h3>Nutrición y Desarrollo</h3>
+                    <p>Planes nutricionales a medida, dietas BARF o comerciales orientadas a lograr una masa muscular limpia sin sobrecargar las articulaciones.</p>
+                </div>
+            </div>
+
+            <!-- 3. Selección y Crecimiento -->
+            <div class="about-card image-card">
+                <img src="img/ejemplares-bully.jpg" alt="Selección y Crecimiento American Bully" class="section-photo">
+                <div class="card-content">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Selección y Crecimiento</h3>
+                    <p>Seguimiento desde cachorros para garantizar una correcta evolución estructural acorde al estándar de la raza American Bully.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="services">
+        <h2 class="section-title">Servicios <span>Especializados</span></h2>
+        <div class="services-grid">
+            
+            <!-- 1. Pruebas de Fertilidad -->
+            <div class="service-box image-service-box">
+                <img src="img/fertilidad-bully.jpg" alt="Pruebas de Fertilidad American Bully" class="service-photo">
+                <div class="service-content">
+                    <i class="fa-solid fa-microscope"></i>
+                    <h3>Pruebas de Fertilidad</h3>
+                    <p>Evaluación seminal completa y seguimiento de ciclos óptimos en hembras para maximizar el éxito reproductivo.</p>
+                </div>
+            </div>
+
+            <!-- 2. Control de Gestación -->
+            <div class="service-box image-service-box">
+                <img src="img/gestacion-bully.jpg" alt="Control de Gestación American Bully" class="service-photo">
+                <div class="service-content">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>Control de Gestación</h3>
+                    <p>Ecografías, radiografías de conteo fetal y asistencia veterinaria profesional durante el parto.</p>
+                </div>
+            </div>
+
+            <!-- 3. Planes Nutricionales -->
+            <div class="service-box image-service-box">
+                <img src="img/planes-nutricionales-bully.jpg" alt="Planes Nutricionales American Bully" class="service-photo">
+                <div class="service-content">
+                    <i class="fa-solid fa-carrot"></i>
+                    <h3>Planes Nutricionales</h3>
+                    <p>Dietas personalizadas para etapas de crecimiento, mantenimiento, reproducción o alta exigencia física.</p>
+                </div>
+            </div>
+
+            <!-- 4. Neonatología Canina -->
+            <div class="service-box image-service-box">
+                <img src="img/neonatologia-bully.jpg" alt="Neonatología Canina American Bully" class="service-photo">
+                <div class="service-content">
+                    <i class="fa-solid fa-baby-carriage"></i>
+                    <h3>Neonatología Canina</h3>
+                    <p>Cuidados intensivos para cachorros recién nacidos, protocolos de lactancia y primeras vacunas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EQUIPO MÉDICO -->
+    <section id="team">
+        <h2 class="section-title">Médicos <span>Especialistas</span></h2>
+        <div class="about-grid">
+            <!-- Dr. Eduar Rivas -->
+            <div class="team-card">
+                <img src="img/eduar-rivas.jpg" alt="Dr. Eduar Rivas" class="doctor-img">
+                <h3>Dr. Eduar Rivas</h3>
+                <p style="color: #e67e22; font-weight: 700; margin-bottom: 10px;">Especialista en Reproducción y Biotecnología Canina</p>
+                <p>Enfocado en monitoreo folicular, inseminación artificial, biotecnología reproductiva y control obstétrico en la raza American Bully.</p>
+            </div>
+            
+            <!-- Dr. Jonathan Cortez -->
+            <div class="team-card">
+                <img src="img/jonathan-cortez.jpg" alt="Dr. Jonathan Cortez" class="doctor-img">
+                <h3>Dr. Jonathan Cortez</h3>
+                <p style="color: #e67e22; font-weight: 700; margin-bottom: 10px;">Especialista en Nutrición y Medicina Preventiva</p>
+                <p>Experto en la formulación de planes nutricionales de alto rendimiento, desarrollo muscular, salud articular y seguimiento clínico integral.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonials">
+        <h2 class="section-title">Criadores <span>Satisfechos</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Gracias al seguimiento de reproducción y las pruebas de JACCBULL logramos sacar adelante una camada espectacular con la estructura exacta que buscábamos."</p>
+                <span>— Marcos G. (Criadero de Bullies)</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"El cambio en la nutrición de mis ejemplares fue radical. Tienen una musculatura limpia, excelente energía y sin problemas articulares. ¡Los mejores en la raza!"</p>
+                <span>— Sofía R. y "Bane"</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer>
+        <p>&copy; 2026 JACCBULL. Todos los derechos reservados. Especialistas en Reproducción y Nutrición American Bully.</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/tu_numero_de_whatsapp" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
